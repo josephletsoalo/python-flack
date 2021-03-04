@@ -1,0 +1,18 @@
+<header>
+   
+   	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">Welcome to Stock Finder:</a>
+	    </div>
+	    <ul class="nav navbar-nav">
+	      <!--<li class="active"><a href="#">Home</a></li>-->
+	      {% for link in nav %}
+	      <li>
+	      <a href="{{ link.url }}">{{ link.name }}</a>
+	    	</li>{% endfor %}
+	    </ul>
+	  </div>
+	</nav>
+
+</header>

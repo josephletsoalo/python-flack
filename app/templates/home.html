@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+	<div class="container">
+  		<div class="jumbotron">
+			<h2>{{description}}</h2><hr>
+    	<div  class="container ">
+          <table  class="table table-hover">
+		    <thead>
+		      <tr>
+		        <th>Make</th>
+		        <th>Model</th>
+		        <th>Year</th>
+		        <th>Color</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		    {% for car in cars %}
+		      <tr>
+		        <td>{{ car.make }}</td>
+		        <td>{{ car.model }}</td>
+		        <td>{{ car.year }}</td>
+		        <td>{{ car.color }}</td>
+		      </tr>
+		      {% endfor %}
+		    </tbody>
+		  </table>
+    	</div>
+    </div>
+    	<hr>
+    	<h2>Enter vehicle data</h2>
+    	<hr>
+    	<div class="container"> 
+			<form class="form-horizontal" action="" method="POST">
+				{{ form.hidden_tag() }}
+				<fieldset class=" form-field col-sm-3 ">
+					{{ form.make.label }}
+					{{ form.make }}
+				</fieldset>
+
+				<fieldset class="form-field col-sm-3 ">
+					{{ form.model.label }}
+					{{ form.model }}
+				</fieldset>
+
+				<fieldset class="form-field col-sm-3 ">
+					{{ form.year.label }}
+					{{ form.year }}
+				</fieldset>
+				<fieldset class="form-field col-sm-3">
+					{{ form.color.label }}
+					{{ form.color }}
+				</fieldset>
+				{{ form.submit }}
+			</form>
+</div>
+		    
+		  
+    	
+    </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+form {
+  background: white;
+  width: 100%;
+}
+
+label {
+  font-size: .9em;
+  color: #5f6988;
+  margin-bottom: 3px;
+  display: block;
+  font-weight: 300;
+}
+input, textarea, select {
+  padding: 10px 13px;
+  margin-bottom: 15px;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  border-radius: 2px;
+  border: 1px solid #d4d9e3;
+  font-weight: 200;
+  color: #4d5060;
+  font-family: 'Poppins', sans-serif;
+  transition: all .3s ease-out;
+  font-size: .9em;
+  outline-color: transparent;
+  outline-style: none;
+}
+
+input[type="submit"],
+button {
+  background: #5eb9d7;
+  color: white;
+  border-radius: 2px;
+  margin-top: 15px;
+  font-weight: 400;
+  border: 1px solid #5eb9d7;
+  line-height: 1;
+  transition: all .3s ease-out;
+}
